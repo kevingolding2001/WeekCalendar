@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>simple grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css ">
+    <link rel="stylesheet" href="cal2.css">
+<style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 2px solid blue;
+}
+
+.parent-grid {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr); /* Replace '4' with the desired number of rows */
+  /* height: 100%; */
+  /* height: calc(100% - 5px); */
+  /* width: calc(100% - 5px); */
+  /* margin: 10px; */
+  /* Additional styles for the parent grid */
+}
+
+.child-item {
+  /* Styles for the child items within the grid */
+  background-color: blanchedalmond;
+  border: 1px solid black;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+  <div class="parent-grid">
+    <div class="child-item" ></div>
+    <div class="child-item" style="grid-row: 10"></div>
+  </div>
+</div>
+</body>
+</html>

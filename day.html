@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .day-schedule {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 10px;
+        }
+
+        .time-column {
+            display: grid;
+            grid-template-rows: repeat(24, 1fr);
+            grid-gap: 10px;
+            align-items: center;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
+
+        .activity {
+            position: relative;
+            background-color: #eaf2ff;
+            padding: 10px;
+            border-radius: 4px;
+            grid-column: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="day-schedule">
+        <div class="time-column">
+            <div class="time-label">12:00 AM</div>
+            <!-- Repeat this div for each hour of the day -->
+            <!-- Adjust the time labels and grid-auto-rows as needed -->
+            <div class="time-label">11:00 PM</div>
+        </div>
+        <div class="activities">
+            <div class="activity" style="grid-row: 3 / span 3;">
+                <h3>Activity 1</h3>
+                <p>Start: 9:00 AM</p>
+                <p>End: 11:00 AM</p>
+            </div>
+            <div class="activity" style="grid-row: 8 / span 2;">
+                <h3>Activity 2</h3>
+                <p>Start: 2:00 PM</p>
+                <p>End: 3:30 PM</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
